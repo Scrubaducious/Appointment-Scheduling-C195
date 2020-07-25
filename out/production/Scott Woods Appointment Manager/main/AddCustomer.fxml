@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AddCustomerController">
+   <children>
+      <GridPane layoutX="125.0" layoutY="255.0" prefHeight="600.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="214.99999389648437" minHeight="10.0" prefHeight="214.99999389648437" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="362.799991607666" minHeight="10.0" prefHeight="264.3999877929687" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="209.60003662109375" minHeight="10.0" prefHeight="121.20001220703125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="130.0" prefWidth="226.0" text="Add/Modify Customer" wrapText="true">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="328.0" prefWidth="180.0" spacing="10.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Address">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Address 2 (Optional)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="129.0" text="Country">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="184.0" text="City">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="203.0" text="Postal Code (ZIP)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="68.0" layoutY="222.0" text="Phone">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Region prefHeight="328.0" prefWidth="46.0" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="CENTER" prefHeight="328.0" prefWidth="184.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="customerNameTxt" prefHeight="27.2" />
+                        <TextField fx:id="customerAddressTxt" prefHeight="27.2" />
+                        <TextField fx:id="customerAddress2Txt" prefHeight="27.2" />
+                        <TextField fx:id="customerCountryTxt" layoutX="10.0" layoutY="166.0" prefHeight="27.2" />
+                        <TextField fx:id="customerCityTxt" layoutX="10.0" layoutY="184.0" prefHeight="27.2" />
+                        <TextField fx:id="customerZipTxt" layoutX="10.0" layoutY="203.0" prefHeight="27.2" />
+                        <TextField fx:id="customerPhoneTxt" layoutX="10.0" layoutY="222.0" prefHeight="27.2" />
+                     </children>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </HBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+               <children>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveBtnClick" text="Save" />
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelBtnClick" text="Cancel" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

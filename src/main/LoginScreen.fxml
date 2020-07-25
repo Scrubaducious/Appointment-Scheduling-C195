@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.LoginScreenController">
+    <children>
+        <GridPane layoutX="125.0" layoutY="255.0" prefHeight="600.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="346.8000068664551" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="485.0" minHeight="0.0" prefHeight="307.6" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="485.0" minHeight="10.0" prefHeight="51.199963378906205" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="400.0" minHeight="0.0" prefHeight="72.1999633789062" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
+                    <children>
+                        <Label fx:id="loginLocationLabel" text="Location:" />
+                        <Label fx:id="loginCurrLocation" text="*DEFAULT LANGUAGE*" />
+                        <Region prefHeight="70.0" prefWidth="110.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="loginExitButton" mnemonicParsing="false" onAction="#exitButtonClick" prefHeight="25.0" prefWidth="70.0" text="Exit" />
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                    </GridPane.margin>
+                </HBox>
+            <VBox alignment="CENTER" spacing="10.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin>
+               <children>
+                      <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                          <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="297.0" prefWidth="225.0" spacing="50.0">
+                                  <children>
+                                      <Label fx:id="loginUsernameLabel" text="Username">
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                                      </Label>
+                                      <Label fx:id="loginPasswordLabel" text="Password">
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                                      </Label>
+                                  </children>
+                              </VBox>
+                              <Region prefHeight="324.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                              <VBox alignment="CENTER" prefHeight="324.0" prefWidth="265.0" spacing="50.0">
+                                  <children>
+                                      <TextField fx:id="loginUsernameTxt" prefHeight="27.2" promptText="Username" />
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="loginPasswordVisibleTxt" promptText="Password" />
+                                    <PasswordField fx:id="loginPasswordHiddenTxt" promptText="Password" />
+                                 </children>
+                              </StackPane>
+                                  </children>
+                              </VBox>
+                          </children>
+                      </HBox>
+                  <Region prefHeight="40.0" prefWidth="410.0" />
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <CheckBox fx:id="loginPasswordToggle" mnemonicParsing="false" onAction="#togglePassword" selected="true" text="Hide Password?" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+                <HBox alignment="BOTTOM_CENTER" prefHeight="146.0" prefWidth="450.0">
+                    <children>
+                        <Label fx:id="loginTitle" alignment="CENTER" prefHeight="166.0" prefWidth="362.0" text="Appointment Manager" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin>
+               <children>
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="25.0" prefWidth="70.0" text="Login" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

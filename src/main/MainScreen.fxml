@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainScreenController">
+   <children>
+      <BorderPane layoutX="329.0" layoutY="140.0" prefHeight="480.0" prefWidth="858.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <VBox prefHeight="501.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="646.0" VBox.vgrow="ALWAYS">
+                    <items>
+                      <Button fx:id="addCustomerBtn" mnemonicParsing="false" onAction="#addCustomerBtnClick" prefHeight="43.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/addCustomerImage.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Add Customer" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="editCustomerBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editCustomerBtnClick" prefHeight="43.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/editCustomer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Edit Customer" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="delCustomerBtn" mnemonicParsing="false" onAction="#deleteCustomer" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="51.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/deleteCustomer2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Delete Customer" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="addApptBtn" mnemonicParsing="false" onAction="#addAppt" prefHeight="43.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/addAppointment.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Add Appointment" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="editApptBtn" mnemonicParsing="false" onAction="#editAppt" prefHeight="43.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/editAppointment.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Edit Appointment" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="deleteApptBtn" layoutX="234.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAppt" prefHeight="43.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/deleteAppointment.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Delete Appointment" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="viewCustomerListBtn" mnemonicParsing="false" onAction="#toCustomerList" prefHeight="43.0" prefWidth="111.0" text="All Customers" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/customerList.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="View Customer List" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="allUsersBtn" mnemonicParsing="false" onAction="#toAllUsers" prefHeight="43.0" prefWidth="52.0" text="All Users" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="typeReportBtn" mnemonicParsing="false" onAction="#generateTypeReport" prefHeight="43.0" prefWidth="117.0" text="Generate Type Report" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="69.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/generateReport2.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Generate Type Report" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutBtnClick" prefHeight="43.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Media/logoutImage.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Exit" />
+                           </tooltip>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <HBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="670.0" VBox.vgrow="NEVER">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="appointmentsLabel" text="All Appointments" HBox.hgrow="NEVER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="370.0" prefWidth="650.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <TableView fx:id="mainApptTable" prefHeight="311.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="mainApptIdCol" prefWidth="75.0" text="Appt. ID" />
+                            <TableColumn fx:id="mainApptCustIdCol" prefWidth="75.0" text="Customer ID" />
+                              <TableColumn fx:id="mainApptTitleCol" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="mainApptLocationCol" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="mainApptTypeCol" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="mainApptDateCol" prefWidth="75.0" text="Date" />
+                              <TableColumn fx:id="mainApptStartCol" prefWidth="75.0" text="Start" />
+                              <TableColumn fx:id="mainApptEndCol" prefWidth="75.0" text="End" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="14.0" prefWidth="650.0" spacing="10.0" VBox.vgrow="NEVER">
+                           <children>
+                              <RadioButton fx:id="allApptRadioBtn" mnemonicParsing="false" onAction="#setTableAll" text="Show ALL">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="apptLayouts" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="pastApptRadioBtn" mnemonicParsing="false" onAction="#setTablePast" text="Show Past" toggleGroup="$apptLayouts" />
+                              <RadioButton fx:id="upcomingApptRadioBtn" mnemonicParsing="false" onAction="#setTableUpcoming" text="Show All Upcoming" toggleGroup="$apptLayouts" />
+                              <RadioButton fx:id="monthlyApptRadioBtn" layoutX="399.0" layoutY="14.0" mnemonicParsing="false" onAction="#setTableMonthly" text="By Month" toggleGroup="$apptLayouts" />
+                              <RadioButton fx:id="weeklyApptRadioBtn" layoutX="573.0" layoutY="14.0" mnemonicParsing="false" onAction="#setTableWeekly" text="By Week" toggleGroup="$apptLayouts" />
+                              <DatePicker fx:id="mainDatePicker" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="858.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="18.0" prefWidth="742.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <left>
+            <VBox prefHeight="419.0" prefWidth="178.0" spacing="20.0" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <TableView fx:id="mainCustomerTable" prefHeight="463.0" prefWidth="178.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="mainCustomerIdCol" prefWidth="42.400023460388184" text="ID" />
+                        <TableColumn fx:id="mainCustomerNameCol" prefWidth="119.20001602172852" text="Customer" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="0.0" prefWidth="178.0" spacing="10.0" VBox.vgrow="NEVER">
+                     <children>
+                        <TextField fx:id="searchCustomerTxt" prefHeight="25.0" prefWidth="116.0" promptText="Customer Name" />
+                        <Button fx:id="searchCustomerBtn" mnemonicParsing="false" onAction="#searchCustomerBtnClick" text="Search" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
